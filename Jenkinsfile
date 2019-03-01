@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Upload to JFrog') {
       steps {
-        sh 'curl -X PUT -u admin/password -T target/my-app-1.0-SNAPSHOT.jar "http://34.215.7.154:8081/artifactory/libs-release-local/my-app-1.0-SNAPSHOT.jar"'
+        sh 'curl -X PUT -u admin:password -T target/my-app-1.0-SNAPSHOT.jar "http://34.215.7.154:8081/artifactory/libs-release-local/my-app-1.0-SNAPSHOT.jar"'
       }
     }
     stage('Deploy') {

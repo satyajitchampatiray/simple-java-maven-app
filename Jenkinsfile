@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh "mvn -B -DskipTests clean install"
+        bat "mvn -B -DskipTests clean install"
       }
     } 
     /*stage('Start Sonar') {
